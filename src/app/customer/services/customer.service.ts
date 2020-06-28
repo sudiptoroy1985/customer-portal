@@ -4,13 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import { Customer } from '../models/customer';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CustomerService {
-
-  constructor(private client: HttpClient ) { }
+  constructor(private client: HttpClient) {}
 
   getAll(): Observable<Customer[]> {
-    return this.client.get('api/customers') as Observable<Customer[]>;
+    const customers = this.client.get('api/customers');
+    console.log(customers);
+    return customers as Observable<Customer[]>;
   }
 }

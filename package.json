@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "json-server src/app/customer/db/customerDb.json & ng serve --proxy-config src/app/proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "stub": "node mb/index.js"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +24,8 @@
     "@ngrx/schematics": "^9.2.0",
     "@ngrx/store": "^1.5.0",
     "@ngrx/store-devtools": "^9.2.0",
+    "bootstrap": "^4.5.0",
+    "json-server": "^0.16.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

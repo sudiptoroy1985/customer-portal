@@ -1,1 +1,5 @@
-<p>customers-list works!</p>
+<div *ngIf="customers$ | async as customers">
+  <div class="customer-list" *ngFor="let customer of customers">
+      <app-customer [customer]=customer></app-customer>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": "87",
+      "addressId": 1
+    },
+    {
+      "id": 2,
+      "name": "Max Mustermann",
+      "age": "35",
+      "addressId": 2
+    },
+    {
+      "id": 3,
+      "name": "Will Smith",
+      "age": "45",
+      "addressId": 3
+    },
+    {
+      "id": 4,
+      "name": "Alice Smith",
+      "age": "25"
+    },
+    {
+      "id": 5,
+      "name": "Phillips jacobs",
+      "age": "23"
+    },
+    {
+      "id": 6,
+      "name": "Jack Daniels",
+      "age": "87"
+    },
+    {
+      "id": 7,
+      "name": "Max Mustermann",
+      "age": "35"
+    },
+    {
+      "id": 8,
+      "name": "Jeff Bezos",
+      "age": "12"
+    },
+    {
+      "id": 9,
+      "name": "Sudipto Roy",
+      "age": "34"
+    },
+    {
+      "id": 10,
+      "name": "Deepak Kumar",
+      "age": "23"
+    }
+  ],
+  "addresses": [
+    {
+      "id": 1
+    }
+  ]
+}

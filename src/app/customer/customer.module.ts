@@ -10,6 +10,9 @@ import { CustomerAddressDetailComponent } from './components/customer-address-de
   imports: [
     CommonModule,
     HttpClientModule,
+  ],
+  exports: [
+    CustomersListComponent
   ]
 })
 export class CustomerModule { }
