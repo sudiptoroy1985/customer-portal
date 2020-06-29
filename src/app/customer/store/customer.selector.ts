@@ -10,3 +10,8 @@ export const selectAllCustomers = createSelector(
   customersState,
   fromCustomers.selectAll
 );
+
+export const selectCustomerAddress = createSelector(
+  customersState,
+  state => state.addresses
+);

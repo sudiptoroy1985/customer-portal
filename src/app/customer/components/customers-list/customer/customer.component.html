@@ -1,5 +1,5 @@
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
+<div [ngClass]="{'card': !isSelected,'card selected': isSelected}">
+  <div class="card-body" (click)="selectCustomer(customer.id)">
     <h5 class="card-title">{{customer.name}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{customer.age}}</h6>
   </div>

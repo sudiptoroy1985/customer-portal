@@ -1,1 +1,29 @@
-<p>customer-address-detail works!</p>
+<div class="jumbotron">
+  <h1 class="display-5">Customer Addresses</h1>
+  <p class="lead">List of all available addresses for our customers</p>
+  <hr class="my-4">
+  <div *ngIf="(customerAddresses$ | async) as customerAddresses">
+   <div *ngIf="customerAddresses.length > 0; else noCustomerSelected">
+    <div class="customer-address-list" *ngFor="let address of customerAddresses">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{address.building}}</h5>
+          <p class="card-text">{{address.street}}</p>
+          <p class="card-text">{{address.zipCode}}</p>
+          <p class="card-text">{{address.state}}</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noCustomerSelected>
+    <div class="alert alert-warning" role="alert">
+      No addresses saved yet for selected customer!
+    </div>
+  </ng-template>
+</div>
+
+
+
+

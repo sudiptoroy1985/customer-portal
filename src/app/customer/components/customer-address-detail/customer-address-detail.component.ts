@@ -1,4 +1,9 @@
+import { selectCustomerAddress } from './../../store/customer.selector';
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { CustomersState } from '../../store/customer.reducer';
+import { CustomerAddress } from '../../models/customer-address';
 
 @Component({
   selector: 'app-customer-address-detail',
@@ -7,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerAddressDetailComponent implements OnInit {
 
-  constructor() { }
+  customerAddresses$: Observable<CustomerAddress[]>;
+
+  constructor(private store: Store<CustomersState>) { }
 
   ngOnInit(): void {
+     this.customerAddresses$ = this.store.pipe(select(selectCustomerAddress));
+
   }
 
 }

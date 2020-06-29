@@ -1,16 +1,10 @@
-import {
-    CustomersListComponent
-} from './customer/components/customers-list/customers-list.component';
-import {
-    CustomerAddressDetailComponent
-} from './customer/components/customer-address-detail/customer-address-detail.component';
+import { CustomerDashboardComponent } from './customer/components/customer-dashboard/customer-dashboard.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', component: CustomersListComponent },
-  { path: 'detail', component: CustomerAddressDetailComponent },
+  { path: '', component: CustomerDashboardComponent },
 ];
 
 @NgModule({

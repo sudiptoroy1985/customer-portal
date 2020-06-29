@@ -1,4 +1,4 @@
-import { CustomersRequested } from './../../store/customer.action';
+import { CustomersRequested, CustomerSelected } from './../../store/customer.action';
 import { CustomerService } from '../../services/customer.service';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
@@ -19,7 +19,14 @@ export class CustomersListComponent implements OnInit {
 
   constructor(private store: Store<CustomersState>) {}
 
+  selectedCustomerId: number;
+
   ngOnInit(): void {
     this.customers$ = this.store.pipe(select(selectAllCustomers));
+  }
+
+  selectCustomer(id: number): void {
+    this.store.dispatch(new CustomerSelected(id));
+    this.selectedCustomerId = id;
   }
 }

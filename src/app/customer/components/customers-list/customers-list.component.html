@@ -1,5 +1,9 @@
 <div *ngIf="customers$ | async as customers">
   <div class="customer-list" *ngFor="let customer of customers">
-      <app-customer [customer]=customer></app-customer>
+      <app-customer
+      [customer]=customer
+      (selectedCustomerId)="selectCustomer($event)"
+      [isSelected]="customer.id === selectedCustomerId">
+    </app-customer>
   </div>
 </div>

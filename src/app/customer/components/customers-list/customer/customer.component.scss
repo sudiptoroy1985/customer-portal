@@ -1,4 +1,14 @@
 ::ng-deep .card {
   width: 100% !important;
-  background-color: lavender;
+  cursor: pointer;
+  border: 0;
+
+  & :hover {
+    background-color: lightcyan;
+  }
+
+  &.selected {
+    border: 1px solid purple;
+  }
 }
+
