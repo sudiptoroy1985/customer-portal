@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-xdescribe('CustomerService', () => {
+describe('CustomerService', () => {
   let service: CustomerService;
 
   beforeEach(() => {
@@ -18,6 +18,10 @@ xdescribe('CustomerService', () => {
   });
 
   it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it('should get all customers', () => {
     expect(service).toBeTruthy();
   });
 });

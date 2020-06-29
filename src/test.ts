@@ -6,6 +6,9 @@ import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
+import 'core-js/es6/reflect';
+import 'core-js/es7/reflect';
+import 'zone.js/dist/zone';
 
 declare const require: {
   context(path: string, deep?: boolean, filter?: RegExp): {

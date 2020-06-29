@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CustomerAddressDetailComponent } from './customer-address-detail.component';
+import { StoreModule } from '@ngrx/store';
+import { customersReducer } from '../../store/customer.reducer';
 
 describe('CustomerAddressDetailComponent', () => {
   let component: CustomerAddressDetailComponent;
@@ -8,7 +10,12 @@ describe('CustomerAddressDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CustomerAddressDetailComponent ]
+      declarations: [ CustomerAddressDetailComponent ],
+      imports:[
+        StoreModule.forRoot({
+          "customers": customersReducer
+        })
+      ]
     })
     .compileComponents();
   }));

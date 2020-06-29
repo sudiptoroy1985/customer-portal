@@ -1,8 +1,9 @@
-import { CustomersState } from './../../store/customer.reducer';
+import { CustomersState, customersReducer } from './../../store/customer.reducer';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CustomersListComponent } from './customers-list.component';
 import { StoreModule, Store } from '@ngrx/store';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('CustomersListComponent', () => {
   let component: CustomersListComponent;
@@ -13,14 +14,11 @@ describe('CustomersListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ CustomersListComponent ],
       imports: [
-        {
-          provide: Store,
-          useValue: {
-            pipe: () => {},
-            dispatch: () => {}
-          }
-        }
-      ]
+          StoreModule.forRoot({
+            "customers": customersReducer
+          })
+      ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));
