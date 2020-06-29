@@ -41,4 +41,5 @@ describe('customerSelectors', () => {
       };
       expect(selectAllCustomers.projector(state)).toEqual(customers);
     });
+   });
   });
