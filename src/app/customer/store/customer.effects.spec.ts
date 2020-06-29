@@ -62,7 +62,7 @@ describe('CustomerEffects', () => {
 
   it('should load selected customers address', (done: DoneFn) => {
     const addresses: CustomerAddress[] = [];
-    addresses.push(new CustomerAddress(1, 'building1', 'Street1', '560102', 'KA', 1));
+    addresses.push(new CustomerAddress(1, 'building1', 'Street1', 560102, 'KA', 1));
     spyOn(customerService, 'getAddressesById').and.returnValue(
       of(addresses)
     );
