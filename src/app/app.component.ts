@@ -11,9 +11,7 @@ import { CustomersRequested } from './customer/store/customer.action';
 export class AppComponent implements OnInit{
   title = 'customer-portal';
 
-  constructor(private store: Store<CustomersState>) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.store.dispatch(new CustomersRequested());
-  }
+  ngOnInit(): void {}
 }

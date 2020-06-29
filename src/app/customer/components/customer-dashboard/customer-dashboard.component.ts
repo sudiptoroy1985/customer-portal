@@ -1,4 +1,7 @@
+import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
+import { CustomersState } from '../../store/customer.reducer';
+import { CustomersRequested } from '../../store/customer.action';
 
 @Component({
   selector: 'app-customer-dashboard',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerDashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<CustomersState>) { }
 
-  ngOnInit() {
+  ngOnInit(): void{
+    this.store.dispatch(new CustomersRequested());
   }
 
 }
