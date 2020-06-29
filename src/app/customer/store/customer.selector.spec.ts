@@ -1,5 +1,4 @@
 import { CustomersState } from './customer.reducer';
-import { TodosState, selectTodos, selectCurrentFilter, selectTodosEntities, getFilteredTodos } from './index';
 
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { Customer } from '../models/customer';
